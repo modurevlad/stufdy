@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<div
+  style="height: calc(100vh - 143px)"
+  class="text-secondary px-4 py-5 text-center"
+>
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-black">About us</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">
+        Hi! I'm Modure Vlad, a beginner programmer with a passion for
+        problem-solving and learning new technologies. I recently started my
+        coding journey, diving into languages like JavaScript and working on
+        small projects to sharpen my skills. I'm excited to grow as a developer
+        and build useful, creative solutions through code. Follow along as I
+        explore the world of programming and share what I learn along the way!
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <form action="/back" method="POST">
+          <input
+            class="btn btn-primary btn-lg px-4 me-sm-3"
+            type="submit"
+            value="Back to Home Page"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

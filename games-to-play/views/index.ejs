@@ -1,0 +1,199 @@
+<%- include("partials/header.ejs") %>
+<div class="main-content">
+  <!-- Introduction -->
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Play With Joy</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Looking for a fun way to pass the time without spending a dime? Check
+        out our list of free games to play to cure boredom! Whether you're into
+        fast-paced action, brain-teasing puzzles, or relaxing casual games,
+        we've got something for everyone. Get ready to beat boredom and discover
+        some awesome new favorites!
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+          Find Games
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+          Contact us
+        </button>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh">
+      <div class="container px-5">
+        <img
+          src="/images/playingGames.jpg"
+          class="img-fluid border rounded-3 shadow-lg mb-4"
+          alt="Example image"
+          width="50%"
+          height="50%"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!--Clickable cards -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">
+      Don't know what to play? Here are some ideas!
+    </h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div
+          class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          id="action-card"
+          style="
+            background-image: url('/images/action-game.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+          >
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Action packed</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div
+          class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          id="strategy-card"
+          style="
+            background-image: url('/images/strategy-game.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div
+            class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+          >
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Strategy</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div
+          class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          id="puzzle-card"
+          style="
+            background-image: url('/images/puzzle-game.webp');
+            background-size: cover;
+          "
+        >
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Puzzle</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousels -->
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/images/fortnite.webp"
+            class="carouselImage d-block w-100"
+            alt="Fortnite"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/rocket-league.jpg"
+            class="carouselImage d-block w-100"
+            alt="rocket league"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/brawlhalla.jpg"
+            class="carouselImage d-block w-100"
+            alt="brawlhalla"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <form action="/" id="form" method="POST">
+    <select name="type">
+      <option value="" data-display="Select">Random type</option>
+      <option value="shooter">Shooter</option>
+      <option value="mmorpg">Mmorpg</option>
+      <option value="strategy">Strategy</option>
+      <option value="racing">Racing</option>
+      <option value="sports">Sports</option>
+      <option value="social">Social</option>
+      <option value="open-world">Open-world</option>
+      <option value="first-person">First person</option>
+      <option value="third-Person">Third person</option>
+      <option value="battle-royale">Battle royale</option>
+      <option value="action">Action</option>
+      <option value="horror">Horror</option>
+      <option value="fighting">Fighting</option>
+      <option value="superhero">Superhero</option>
+    </select>
+    <select name="platform">
+      <option value="any">Any platform</option>
+      <option value="pc">PC</option>
+      <option value="browser">Web Browser</option>
+    </select>
+    <select name="sort-by">
+      <option value=""></option>
+    </select>
+  </form>
+</div>
+<%- include("partials/footer.ejs") %>
+
+<script>
+  document.getElementById("action-card").addEventListener("click", () => {
+    window.location.href = "https://google.com";
+  });
+</script>
